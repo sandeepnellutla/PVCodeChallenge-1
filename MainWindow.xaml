@@ -1,0 +1,31 @@
+﻿<Window x:Class="PVCodeChallenge.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PVCodeChallenge"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="600" FontFamily="Cambria" FontSize="14">
+    <Grid Margin="0,0,0,-21">
+        <Label x:Name="lblHeading" Content="Practice Velocity Code Challenge" HorizontalAlignment="Center" Margin="0,10,0,0" 
+               VerticalAlignment="Top" Height="42" Width="592" Background="#FFC4D8E4" FontFamily="Cambria" FontSize="24" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+        <Label x:Name="lblOptions" Content="Select Event Type" Margin="0,63,448,445" BorderBrush="Black" Foreground="Black" Background="#FFB6CED4" HorizontalAlignment="Right" Width="118"/>
+        <ComboBox x:Name="cbOptions" HorizontalAlignment="Left" Margin="158,63,0,0" VerticalAlignment="Top" Width="173" Height="32">
+            <ComboBoxItem Content="'Register'" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="'Diagnose'" HorizontalAlignment="Left" Width="118"/>
+        </ComboBox>
+        <Button x:Name="button" Content="Submit" HorizontalAlignment="Left" Margin="346,63,0,445" Width="116" Click="button_Click"/>
+
+        <DataGrid x:Name="dataGrid" Margin="0,114,0,108" 
+                  HorizontalAlignment="Stretch"
+                  VerticalAlignment="Stretch"
+                  AutoGenerateColumns="false"  DockPanel.Dock="Top" 
+                  ItemsSource="{Binding  EventResults}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Key" Binding="{Binding Key}" />
+                <DataGridTextColumn Header="Value" Binding="{Binding Value}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>

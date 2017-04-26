@@ -1,0 +1,14 @@
+c:\users\corsair\documents\visual studio 2017\Projects\PVCodeChallenge\PVCodeChallenge\bin\Debug\PVCodeChallenge.exe.config
+c:\users\corsair\documents\visual studio 2017\Projects\PVCodeChallenge\PVCodeChallenge\bin\Debug\PVCodeChallenge.exe
+c:\users\corsair\documents\visual studio 2017\Projects\PVCodeChallenge\PVCodeChallenge\bin\Debug\PVCodeChallenge.pdb
+c:\users\corsair\documents\visual studio 2017\Projects\PVCodeChallenge\PVCodeChallenge\obj\Debug\PVCodeChallenge.csprojResolveAssemblyReference.cache
+c:\users\corsair\documents\visual studio 2017\Projects\PVCodeChallenge\PVCodeChallenge\obj\Debug\MainWindow.g.cs
+c:\users\corsair\documents\visual studio 2017\Projects\PVCodeChallenge\PVCodeChallenge\obj\Debug\App.g.cs
+c:\users\corsair\documents\visual studio 2017\Projects\PVCodeChallenge\PVCodeChallenge\obj\Debug\PVCodeChallenge_MarkupCompile.cache
+c:\users\corsair\documents\visual studio 2017\Projects\PVCodeChallenge\PVCodeChallenge\obj\Debug\PVCodeChallenge_MarkupCompile.lref
+c:\users\corsair\documents\visual studio 2017\Projects\PVCodeChallenge\PVCodeChallenge\obj\Debug\MainWindow.baml
+c:\users\corsair\documents\visual studio 2017\Projects\PVCodeChallenge\PVCodeChallenge\obj\Debug\PVCodeChallenge.g.resources
+c:\users\corsair\documents\visual studio 2017\Projects\PVCodeChallenge\PVCodeChallenge\obj\Debug\PVCodeChallenge.Properties.Resources.resources
+c:\users\corsair\documents\visual studio 2017\Projects\PVCodeChallenge\PVCodeChallenge\obj\Debug\PVCodeChallenge.csproj.GenerateResource.Cache
+c:\users\corsair\documents\visual studio 2017\Projects\PVCodeChallenge\PVCodeChallenge\obj\Debug\PVCodeChallenge.exe
+c:\users\corsair\documents\visual studio 2017\Projects\PVCodeChallenge\PVCodeChallenge\obj\Debug\PVCodeChallenge.pdb
