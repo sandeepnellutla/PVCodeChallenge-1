@@ -39,7 +39,7 @@ namespace PVCodeChallenge
                     case "'Diagnose'": EventResults = BusinessLogic.BLFactoryIM.GetNumbersForDiagnoseIM(0, 100); break;
                     default: lblResults.Content = "Please select an Event Type"; shouldreturn = true; break;
                 }
-
+                
                 if (shouldreturn) return;
 
                 // Show Results

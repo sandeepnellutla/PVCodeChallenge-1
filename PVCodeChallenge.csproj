@@ -63,6 +63,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="BusinessLogic\BLFactory.cs" />
+    <Compile Include="BusinessLogic\IBLFactory.cs" />
     <Compile Include="BusinessLogic\UnitTestClass.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

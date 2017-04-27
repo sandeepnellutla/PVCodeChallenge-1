@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace PVCodeChallenge.BusinessLogic
@@ -78,10 +79,96 @@ namespace PVCodeChallenge.BusinessLogic
         }
 
         #endregion
-
-
     }
 
+    /*------------- INTERFACED -----------------------*/
+    public class BLFactoryIMWithInterface : IBLFactory
+    {
+        public Dictionary<int, string> GetNumbersForDiagnoseIMWithInterface(int minNum, int maxNum)
+        {
+            Dictionary<int, string> sortedresults = new Dictionary<int, string>();
+            try
+            {
+                var allnumbers = Enumerable.Range(minNum, maxNum);
+
+                sortedresults = (allnumbers
+                                    .Where(x => x % 3 == 0)
+                                    .Where(x => x % 7 != 0)
+                                    .ToDictionary(key => key, value => "'Register'"))
+                                .Union
+                                    (allnumbers
+                                    .Where(x => x % 7 == 0)
+                                    .Where(x => x % 3 != 0)
+                                    .ToDictionary(key => key, value => "'Patient'")
+                                )
+                                .Union
+                                (
+                                    allnumbers
+                                    .Where(x => x % 3 == 0)
+                                    .Where(x => x % 7 == 0)
+                                    .ToDictionary(key => key, value => "'Register'&'Patient'")
+                                )
+                                .Union
+                                (
+                                    allnumbers
+                                    .Where(x => x % 3 != 0)
+                                    .Where(x => x % 7 != 0)
+                                    .ToDictionary(key => key, value => value.ToString())
+                                )
+                            .OrderBy(x => x.Key)
+                            .ToDictionary(x => x.Key, y => y.Value);
+
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Something went wrong!" + ex.Message);
+            }
+            //throw new NotImplementedException();
+            return sortedresults;
+        }
+
+        public Dictionary<int, string> GetNumbersForRegisterIMWithInterface(int minNum, int maxNum)
+        {
+            Dictionary<int, string> sortedresults = new Dictionary<int, string>();
+            var allnumbers = Enumerable.Range(minNum, maxNum);
+            try
+            {
+                sortedresults = (allnumbers
+                                    .Where(x => x % 2 == 0)
+                                    .Where(x => x % 7 != 0)
+                                    .ToDictionary(key => key, value => "'Diagnose'"))
+                                .Union
+                                    (allnumbers
+                                    .Where(x => x % 7 == 0)
+                                    .Where(x => x % 2 != 0)
+                                    .ToDictionary(key => key, value => "'Patient'")
+                                )
+                                .Union
+                                (
+                                    allnumbers
+                                    .Where(x => x % 2 == 0)
+                                    .Where(x => x % 7 == 0)
+                                    .ToDictionary(key => key, value => "'Diagnose'&'Patient'")
+                                )
+                                .Union
+                                (
+                                    allnumbers
+                                    .Where(x => x % 2 != 0)
+                                    .Where(x => x % 7 != 0)
+                                    .ToDictionary(key => key, value => value.ToString())
+                                )
+                            .OrderBy(x => x.Key)
+                            .ToDictionary(x => x.Key, y => y.Value);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Something went wrong!" + ex.Message);
+            }
+            //throw new NotImplementedException();
+            return sortedresults;
+        }
+    }
 
     /*----------- IMPROVED MEMORY --------------------*/
     public static class BLFactoryIM
