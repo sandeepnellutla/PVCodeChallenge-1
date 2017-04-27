@@ -16,7 +16,7 @@
         </ComboBox>
         <Button x:Name="button" Content="Submit" HorizontalAlignment="Left" Margin="346,63,0,445" Width="116" Click="button_Click"/>
 
-        <DataGrid x:Name="dataGrid" Margin="0,114,0,108" 
+        <DataGrid x:Name="dataGrid" Margin="0,140,0,82" 
                   HorizontalAlignment="Stretch"
                   VerticalAlignment="Stretch"
                   AutoGenerateColumns="false"  DockPanel.Dock="Top" 
@@ -26,6 +26,7 @@
                 <DataGridTextColumn Header="Value" Binding="{Binding Value}" />
             </DataGrid.Columns>
         </DataGrid>
+        <Label x:Name="lblResults" Content="" HorizontalAlignment="Left" Margin="0,107,0,0" VerticalAlignment="Top" Width="592" Background="#FFD4DFE0"/>
 
     </Grid>
 </Window>
